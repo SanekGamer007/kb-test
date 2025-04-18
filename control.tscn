@@ -1,0 +1,260 @@
+[gd_scene load_steps=9 format=3 uid="uid://c66skydm0bh4b"]
+
+[ext_resource type="Script" uid="uid://jr7g117pbpky" path="res://special.gd" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://dnbkgle4e4uiv" path="res://bg.jpg" id="1_kbped"]
+[ext_resource type="Script" uid="uid://bduvqx7008ang" path="res://text_edit.gd" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://sn8pxny25eno" path="res://lshift.gd" id="2_qtu10"]
+[ext_resource type="StyleBox" uid="uid://bt4dsqlxncfa3" path="res://new_style_box_flat.tres" id="4_ee4bf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fj5cn"]
+texture = ExtResource("1_kbped")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0.87, 1, 0.885167, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0fbet"]
+font_size = 48
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 48
+shadow_color = Color(0, 0, 0, 0.117647)
+shadow_offset = Vector2(-4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbped"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(-1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [-46.0]
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -2
+layout_mode = 1
+offset_right = 1164.0
+offset_bottom = 653.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fj5cn")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 271.0
+offset_top = 99.0
+offset_right = 1104.0
+offset_bottom = 264.0
+theme_override_styles/panel = ExtResource("4_ee4bf")
+
+[node name="Input" type="BoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.578
+anchor_top = 0.29
+anchor_right = 0.617
+anchor_bottom = 0.29
+offset_left = -423.856
+offset_top = -67.92
+offset_right = 423.216
+offset_bottom = 60.08
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="InputBox" type="VBoxContainer" parent="Input"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Input/InputBox"]
+custom_minimum_size = Vector2(486, 128)
+layout_mode = 2
+placeholder_text = "SHIT GOES HERE
+(a-z,0-9)"
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
+script = ExtResource("2_62e2m")
+
+[node name="Special" type="BoxContainer" parent="Input"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+alignment = 1
+script = ExtResource("1_62e2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Input/Special"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="BoxContainer" type="BoxContainer" parent="Input/Special/VBoxContainer"]
+layout_mode = 2
+
+[node name="period" type="Button" parent="Input/Special/VBoxContainer/BoxContainer"]
+layout_mode = 2
+text = "  .  "
+
+[node name="esc" type="Button" parent="Input/Special/VBoxContainer/BoxContainer"]
+layout_mode = 2
+text = "Escape
+"
+alignment = 0
+
+[node name="space" type="Button" parent="Input/Special/VBoxContainer/BoxContainer"]
+layout_mode = 2
+text = "Space"
+icon_alignment = 1
+
+[node name="enter" type="Button" parent="Input/Special/VBoxContainer/BoxContainer"]
+layout_mode = 2
+text = "Enter↵"
+
+[node name="bckspc" type="Button" parent="Input/Special/VBoxContainer/BoxContainer"]
+layout_mode = 2
+text = "⌫"
+
+[node name="BoxContainer2" type="BoxContainer" parent="Input/Special/VBoxContainer"]
+layout_mode = 2
+
+[node name="slash" type="Button" parent="Input/Special/VBoxContainer/BoxContainer2"]
+layout_mode = 2
+text = "  /  "
+
+[node name="quote" type="Button" parent="Input/Special/VBoxContainer/BoxContainer2"]
+layout_mode = 2
+text = "  \"  "
+
+[node name="HSeparator" type="HSeparator" parent="Input/Special/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Input/Special/VBoxContainer"]
+layout_mode = 2
+
+[node name="lshift" type="CheckButton" parent="Input/Special/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Left Shirt"
+script = ExtResource("2_qtu10")
+
+[node name="Arrows" type="VBoxContainer" parent="Input/Special"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+
+[node name="up" type="BoxContainer" parent="Input/Special/Arrows"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="up" type="Button" parent="Input/Special/Arrows/up"]
+layout_mode = 2
+text = "  ↑  "
+
+[node name="leftdownright" type="BoxContainer" parent="Input/Special/Arrows"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="left" type="Button" parent="Input/Special/Arrows/leftdownright"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+text = " ← "
+
+[node name="down" type="Button" parent="Input/Special/Arrows/leftdownright"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+text = "  ↓  "
+
+[node name="right" type="Button" parent="Input/Special/Arrows/leftdownright"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+text = " → "
+
+[node name="Title" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -555.0
+offset_top = 48.0
+offset_right = -330.0
+offset_bottom = 535.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 2
+text = "usb 
+touch
+keyboard
+3000
+GODOT© 
+4.4© 
+edition©"
+label_settings = SubResource("LabelSettings_0fbet")
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+custom_minimum_size = Vector2(518, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -288.0
+offset_right = 397.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="BoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_ee4bf")
+
+[node name="Label" type="Label" parent="BoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -100.5
+offset_right = 292.0
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "this shitty app allows you to turn your phone into a usb keyboard
+
+
+this is just the ui frontend, the stuff used for the 'backend':
+https://github.com/pelya/android-keyboard-gadget/ 
+for transforming text into hid codes
+
+
+https://github.com/tejado/android-usb-gadget
+for spoofing the device into a hid compatible keyboard
+"
+label_settings = SubResource("LabelSettings_kbped")
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="Input/InputBox/TextEdit" to="Input/InputBox/TextEdit" method="_on_text_changed"]
+[connection signal="toggled" from="Input/Special/VBoxContainer/HBoxContainer/lshift" to="Input/Special/VBoxContainer/HBoxContainer/lshift" method="_on_toggled"]

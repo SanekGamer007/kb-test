@@ -1,0 +1,17 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://bt4dsqlxncfa3"]
+
+[resource]
+bg_color = Color(0.0352941, 0.0313726, 0.0235294, 0.313726)
+skew = Vector2(0.1, 0)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 0.447059)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 32.0
+expand_margin_right = 32.0
+shadow_color = Color(0, 0, 0, 0.47451)
+anti_aliasing_size = 4.0
