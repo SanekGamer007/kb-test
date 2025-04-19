@@ -37,11 +37,36 @@ grow_vertical = 2
 metadata/_edit_horizontal_guides_ = [-46.0]
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.384314)
 z_index = -2
 layout_mode = 1
 offset_right = 1164.0
 offset_bottom = 653.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_fj5cn")
+
+[node name="Title" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.55
+anchor_right = 0.1
+anchor_bottom = 0.55
+offset_top = -243.5
+offset_right = 263.0
+offset_bottom = 243.5
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Title"]
+layout_mode = 2
+text = "usb 
+touch
+keyboard
+3000
+GODOT© 
+4.4© 
+edition©"
+label_settings = SubResource("LabelSettings_0fbet")
+vertical_alignment = 1
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 2
@@ -141,7 +166,7 @@ layout_mode = 2
 
 [node name="lshift" type="CheckButton" parent="Input/Special/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "Left Shirt"
+text = "Left Shift"
 script = ExtResource("2_qtu10")
 
 [node name="Arrows" type="VBoxContainer" parent="Input/Special"]
@@ -185,29 +210,6 @@ size_flags_horizontal = 6
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.0
 text = " → "
-
-[node name="Title" type="BoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -555.0
-offset_top = 48.0
-offset_right = -330.0
-offset_bottom = 535.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="Title"]
-layout_mode = 2
-text = "usb 
-touch
-keyboard
-3000
-GODOT© 
-4.4© 
-edition©"
-label_settings = SubResource("LabelSettings_0fbet")
-vertical_alignment = 1
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 custom_minimum_size = Vector2(518, 0)
