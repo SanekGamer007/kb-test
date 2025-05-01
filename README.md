@@ -8,9 +8,10 @@ allows you to turn your android phone into a usb keyboard
 support only keyboard emulation and probably wont ever support mouse or others.
  
 ## requirements:
-* rooted android phone
+* rooted android phone (only ksunext was tested, magisk should work too though)
 * kernel 4.4 or newer(or whatever android-keyboard-gadget will work on)
 * any cable that allows data transfer between devices
+
 
 ## how to use
 * install [android-usb-gadget](https://github.com/tejado/android-usb-gadget)
