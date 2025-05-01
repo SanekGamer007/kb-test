@@ -3,6 +3,8 @@
 
 gui for [hid-gadget-test](https://github.com/pelya/android-keyboard-gadget/blob/master/hid-gadget-test/hid-gadget-test) made in godot 4
 
+allows you to turn your android phone into a usb keyboard
+
 support only keyboard emulation and probably wont ever support mouse or others.
  
 ## requirements:
