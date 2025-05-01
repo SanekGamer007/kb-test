@@ -77,8 +77,10 @@ anchor_left = 0.95
 anchor_top = 0.17
 anchor_right = 0.95
 anchor_bottom = 0.17
-offset_left = -807.0
-offset_bottom = 165.0
+offset_left = -837.4
+offset_top = -0.160004
+offset_right = -0.400024
+offset_bottom = 164.84
 grow_horizontal = 0
 theme_override_styles/panel = ExtResource("4_ee4bf")
 
@@ -189,7 +191,6 @@ layout_mode = 2
 text = "  ↑  "
 
 [node name="leftdownright" type="BoxContainer" parent="Input/Special/Arrows"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
