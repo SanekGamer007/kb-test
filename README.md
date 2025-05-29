@@ -19,7 +19,7 @@ support only keyboard emulation and probably wont ever support mouse or others.
 * select "Mouse & Keyboard"
 * enable it
 * download [hid-gadget-test](https://github.com/pelya/android-keyboard-gadget/blob/master/hid-gadget-test/hid-gadget-test?raw=true)
-* move the executable to /data/local/tmp
+* move the executable to `/data/local/tmp`
 * install [kb-test](https://github.com/SanekGamer007/kb-test/releases/download/v1.0.0/kb-test.apk)
 * grant root permissions
 * connect the other device and it should work
